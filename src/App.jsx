@@ -42,7 +42,7 @@ const App = () => {
           </div>
         </div>
       </div>
-
+      
       <button onClick={nextFlashcard}>Next Question</button>
     </div>
   );
