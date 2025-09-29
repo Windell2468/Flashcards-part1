@@ -23,6 +23,10 @@ const App = () => {
     setCurrentFlashcardIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
   };
 
+  const backFlashcard = () => {
+    setFlip(false)
+    setCurrentFlashcardIndex((prevIndex) => (prevIndex - 1 + flashcards.length) % flashcards.length);
+  }
   return (
     <div className="App">
       <h1>Greatest Cartoon and Anime Quiz</h1>
@@ -42,7 +46,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      
+      <button onClick={backFlashcard}> Back Question</button>
       <button onClick={nextFlashcard}>Next Question</button>
     </div>
   );
