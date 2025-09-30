@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 import './App.css';
+import SpongeHouse from './assets/spongebob-house.png';
 
 const App = () => {
   const [flashcards] = useState([
