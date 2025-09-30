@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import SpongebobHouse from './assets/Spongebob House.png'; // <--- ADD THIS BACK
 import './App.css';
+// ...
 
 const App = () => {
   const [flashcards] = useState([
     { question: 'Are you ready to start the quiz?', answer: 'Lets get it started' },
-    { question: 'Who lives in a pineapple under the sea?', answer: 'Spongebob Squarepants' },
+    { question: 'Who lives in a pineapple under the sea?', answer: 'Spongebob Squarepants', category: 'Spongebob', image: SpongebobHouse },
     { question: 'What is the name of the city where the Simpsons live?', answer: 'Springfield' },
     { question: 'What does Jimmy Neutron call himself?', answer: 'The Boy Genius' },
     { question: "What are Timmy Turner's fairy godparents' names?", answer: 'Cosmo and Wanda' },
@@ -36,6 +38,7 @@ const App = () => {
     setFlip(false)
     setCurrentFlashcardIndex((prevIndex) => (prevIndex - 1 + flashcards.length) % flashcards.length);
   }
+  const currentCard = flashcards[currentFlashcardIndex];
   return (
     <div className="App">
       <h1>Greatest Cartoon and Anime Quiz</h1>
