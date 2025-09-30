@@ -10,9 +10,9 @@
   justify-content: center;
   align-items: center;
 }
-
+/* */
 .flip-card {
-  background-color: white;
+  /*background-color: white; */
   width: 600px;
   height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -29,6 +29,8 @@
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  /*background-color: white; */
   
 }
 .flip-card.flip .flip-card-inner {
@@ -38,7 +40,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   border-radius: 10px;
 }
