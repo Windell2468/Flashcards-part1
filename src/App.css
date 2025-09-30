@@ -10,6 +10,12 @@
   justify-content: center;
   align-items: center;
 }
+html, body {
+  margin: 0; 
+  padding: 0;
+  /* This prevents horizontal scrollbars that cause alignment issues */
+  overflow-x: hidden; 
+}
 /* */
 .flip-card {
   /*background-color: white; */

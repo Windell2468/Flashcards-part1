@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import SpongebobHouse from './assets/Spongebob House.png'; // <--- ADD THIS BACK
+
 import './App.css';
-// ...
 
 const App = () => {
   const [flashcards] = useState([
     { question: 'Are you ready to start the quiz?', answer: 'Lets get it started' },
-    { question: 'Who lives in a pineapple under the sea?', answer: 'Spongebob Squarepants', category: 'Spongebob', image: SpongebobHouse },
+    { question: 'Who lives in a pineapple under the sea?', answer: 'Spongebob Squarepants' },
     { question: 'What is the name of the city where the Simpsons live?', answer: 'Springfield' },
     { question: 'What does Jimmy Neutron call himself?', answer: 'The Boy Genius' },
     { question: "What are Timmy Turner's fairy godparents' names?", answer: 'Cosmo and Wanda' },
