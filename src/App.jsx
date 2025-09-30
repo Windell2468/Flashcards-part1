@@ -21,8 +21,16 @@ const App = () => {
 
   const nextFlashcard = () => {
     setFlip(false);
-    setCurrentFlashcardIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
+    
+    let randomIndex = Math.floor(Math.random() * flashcards.length);
+    
+    while (randomIndex === currentFlashcardIndex && flashcards.length > 1) {
+      randomIndex = Math.floor(Math.random() * flashcards.length);
+    }
+    setCurrentFlashcardIndex(randomIndex);
+    
   };
+
 
   const backFlashcard = () => {
     setFlip(false)
